@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<string.h>
+#define DENSITY 62.4
+int main(void)
+{
+	float weight, volume;
+	int size, letter;
+	char name[4];
+	printf("Hi! What's your first name?\n");
+	scanf_s("%s", name);
+	printf("%s, what's your weight is pounds?\n", name);
+	scanf_s("%f", weight);
+	size = sizeof name;
+	letter = strlen(name);
+	volume = weight / DENSITY;
+	printf("Well, %s,your volume is %2.2f cubic feet.\n",name,volume);
+	printf("Also, your first name has %d letters,\n",letter);
+	printf("and we have %d bytes to store it.\n", size);
+	return 0;
+}
